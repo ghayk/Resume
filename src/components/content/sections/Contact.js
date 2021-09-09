@@ -1,4 +1,4 @@
-export default function AboutMe() {
+export default function Contact() {
   return (
     <section className="animated-section start-page ps section-active">
       <div
@@ -10,7 +10,7 @@ export default function AboutMe() {
           alignItems: "center",
         }}
       >
-        <h2 style={{ fontSize: "50px" }}>About Me</h2>
+        <h2 style={{ fontSize: "50px" }}>Contact</h2>
       </div>
     </section>
   );
