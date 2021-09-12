@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import mainPhoto from "../../img/main_photo.jpg";
 const menuArr = [

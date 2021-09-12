@@ -2763,3 +2763,70 @@ blockquote {
     font-size: 18px;
   }
 }
+
+.CSSTransition {
+  position: absolute;
+}
+.CSSTransition-enter-active {
+  -webkit-animation: moveToLeftFade 1s forwards;
+  animation: moveToLeftFade 1s forwards;
+}
+.CSSTransition-exit-active {
+  -webkit-animation: rotatePushRight 1s forwards;
+  animation: rotatePushRight 1s forwards;
+}
+
+@-webkit-keyframes moveToLeftFade {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToLeftFade {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes rotatePushRight {
+  from {
+  }
+  to {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes rotatePushRight {
+  from {
+  }
+  to {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+.animated-section::-webkit-scrollbar {
+  width: 15px;
+}
+.animated-section::-webkit-scrollbar-track {
+  background: #444;
+  border-radius: 0 8px 8px 0;
+}
+.animated-section::-webkit-scrollbar-thumb {
+  background: #777;
+  border-radius: 0 8px 8px 0;
+  border: 4px solid #444;
+}
+.animated-section::-webkit-scrollbar-thumb:hover {
+  background: #04b4e0;
+}

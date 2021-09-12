@@ -1,7 +1,7 @@
+import React from "react";
 export default function Portfolio() {
   return (
-    <section 
-    className="animated-section start-page ps section-active">
+    <section className="animated-section start-page ps section-active">
       <div
         style={{
           height: "100%",

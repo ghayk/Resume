@@ -1,6 +1,7 @@
+import React from "react";
 import "./App.css";
 import "./css/main.css";
-import "./css/animations.css";
+// import "./css/animations.css";
 import "./css/bootstrap-grid.min.css";
 import "./css/magnific-popup.css";
 import "./css/owl.carousel.css";

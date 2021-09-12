@@ -1,3 +1,4 @@
+import React from "react";
 export default function Contact() {
   return (
     <section className="animated-section start-page ps section-active">

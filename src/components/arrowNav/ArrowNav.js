@@ -1,3 +1,4 @@
+import React from "react";
 export default function ArrowNav() {
   return (
     <div className="lmpixels-arrows-nav">
