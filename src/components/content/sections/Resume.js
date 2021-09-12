@@ -1,5 +1,18 @@
 import React from "react";
 export default function Resume() {
+  const arrDesignSkills = [
+    { name: "Web Design", percent: 95 },
+    { name: "Print Design", percent: 65 },
+    { name: "Logo Design", percent: 80 },
+    { name: "Graphic Design", percent: 90 },
+  ];
+  const arrCodingSkills = [
+    { name: "JavaScript", percent: 95 },
+    { name: "PHP", percent: 85 },
+    { name: "HTML/CSS", percent: 100 },
+    { name: "Smarty/Twig", percent: 75 },
+    { name: "Perl", percent: 90 },
+  ];
   return (
     <section className="animated-section section-active ps--theme_default ps--active-y">
       <div className="page-title">
@@ -111,37 +124,22 @@ export default function Resume() {
             </div>
 
             <div className="skills-info skills-second-style">
-              <div className="skill clearfix">
-                <h4>Web Design</h4>
-                <div className="skill-value">95%</div>
-              </div>
-              <div className="skill-container skill-1">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>Print Design</h4>
-                <div className="skill-value">65%</div>
-              </div>
-              <div className="skill-container skill-2">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>Logo Design</h4>
-                <div className="skill-value">80%</div>
-              </div>
-              <div className="skill-container skill-3">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>Graphic Design</h4>
-                <div className="skill-value">90%</div>
-              </div>
-              <div className="skill-container skill-4">
-                <div className="skill-percentage"></div>
-              </div>
+              {arrDesignSkills.map(({ name, percent }) => {
+                return (
+                  <div key={name}>
+                    <div className="skill clearfix">
+                      <h4>{name}</h4>
+                      <div className="skill-value">{`${percent}%`}</div>
+                    </div>
+                    <div className="skill-container">
+                      <div
+                        style={{ width: `${percent}%` }}
+                        className="skill-percentage"
+                      ></div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="white-space-10"></div>
@@ -153,45 +151,22 @@ export default function Resume() {
             </div>
 
             <div className="skills-info skills-second-style">
-              <div className="skill clearfix">
-                <h4>JavaScript</h4>
-                <div className="skill-value">95%</div>
-              </div>
-              <div className="skill-container skill-5">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>PHP</h4>
-                <div className="skill-value">85%</div>
-              </div>
-              <div className="skill-container skill-6">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>HTML/CSS</h4>
-                <div className="skill-value">100%</div>
-              </div>
-              <div className="skill-container skill-7">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>Smarty/Twig</h4>
-                <div className="skill-value">75%</div>
-              </div>
-              <div className="skill-container skill-8">
-                <div className="skill-percentage"></div>
-              </div>
-
-              <div className="skill clearfix">
-                <h4>Perl</h4>
-                <div className="skill-value">90%</div>
-              </div>
-              <div className="skill-container skill-9">
-                <div className="skill-percentage"></div>
-              </div>
+              {arrCodingSkills.map(({ name, percent }) => {
+                return (
+                  <div key={name}>
+                    <div className="skill clearfix">
+                      <h4>{name}</h4>
+                      <div className="skill-value">{`${percent}%`}</div>
+                    </div>
+                    <div className="skill-container">
+                      <div
+                        style={{ width: `${percent}%` }}
+                        className="skill-percentage"
+                      ></div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="white-space-10"></div>

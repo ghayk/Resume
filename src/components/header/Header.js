@@ -36,32 +36,24 @@ export default function Header() {
       <div className="social-links">
         <ul>
           <li>
-            <a
-              href="https://www.linkedin.com/in/hayk-grigoryan-857b5520b"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/hayk-grigoryan-857b5520b">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </li>
           <li>
-            <a
-              href="https://www.facebook.com/hayk.grigoryan.1994"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/hayk.grigoryan.1994">
               <i className="fab fa-facebook-f"></i>
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a>
               <i className="fab fa-twitter"></i>
             </a>
           </li>
         </ul>
       </div>
       <div className="header-buttons">
-        <a href="#" target="_blank" className="btn btn-primary">
-          Download CV
-        </a>
+        <a className="btn btn-primary">Download CV</a>
       </div>
       <div className="copyrights">© 2021 All rights reserved.</div>
     </div>

@@ -1,13 +1,12 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Home from "./sections/Home";
 import AboutMe from "./sections/AboutMe";
 import Resume from "./sections/Resume";
 import Portfolio from "./sections/Portfolio";
 import Blog from "./sections/Blog";
 import Contact from "./sections/Contact";
-import { useState } from "react";
 
 export default function Content() {
   const sections = [
@@ -18,39 +17,28 @@ export default function Content() {
     { path: "/blog", Component: Blog },
     { path: "/contact", Component: Contact },
   ];
-  const [x, setX] = useState(true);
   return (
     <div className="content-area">
       <div className="animated-sections">
-        <button
-          style={{
-            position: "absolute",
-            top: "-60px",
-            backgroundColor: "#078",
-          }}
-          onClick={() => setX(!x)}
-        >
-          click
-        </button>
-        <Switch>
-          {sections.map(({ path, Component }) => {
-            return (
-              <Route key={path} exact path={path}>
-                {({ match }) => (
+        <TransitionGroup>
+          <Switch>
+            {sections.map(({ path, Component }) => {
+              return (
+                <Route key={path} exact path={path}>
                   <CSSTransition
                     timeout={2000}
                     classNames="CSSTransition"
                     unmountOnExit
-                    in={match != null}
+                    in
                   >
                     <Component />
                   </CSSTransition>
-                )}
-              </Route>
-            );
-          })}
-          <Redirect to="/" />
-        </Switch>
+                </Route>
+              );
+            })}
+            <Redirect to="/" />
+          </Switch>
+        </TransitionGroup>
       </div>
     </div>
   );

@@ -1,13 +1,15 @@
 import React from "react";
-export default function ArrowNav() {
+import { withRouter } from "react-router-dom";
+function ArrowNav(props) {
   return (
     <div className="lmpixels-arrows-nav">
       <div className="lmpixels-arrow-right">
-        <i className="lnr lnr-chevron-right"></i>
+        <span>{`>`}</span>
       </div>
       <div className="lmpixels-arrow-left">
-        <i className="lnr lnr-chevron-left"></i>
+        <span>{`<`}</span>
       </div>
     </div>
   );
 }
+export default withRouter(ArrowNav);
