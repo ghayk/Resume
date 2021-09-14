@@ -2516,3 +2516,14 @@ blockquote {
 .animated-section::-webkit-scrollbar-thumb:hover {
   background: #04b4e0;
 }
+.portfolio-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.portfolio-flex div {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+}
